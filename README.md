@@ -1,3 +1,54 @@
+<h1>Project API Monitoring Stock Produk - LARAVEL 10</h1>
+
+#### Berikut model pada API
+
+-   Category
+-   Product
+
+#### Berikut daftar end point pada API
+
+-   /api/login
+-   /api/register
+-   /api/category (Method: Post, Get, Delete, Patch)
+-   /api/products (Method: Post, Get, Delete, Patch)
+
+#### Langkah-langkah pemakaian
+
+Untuk menggunakan API anda dapat meng-clone repository atau dapat men-download file berupa zip.
+
+#### `git clone https://github.com/rizalkhisyam/pos_app.git`
+
+##### 1. Setting .env
+
+Setelah file project didownload atau diclone, copy file .env.example file dan rename file tersebut menjadi .env saja. Buat database dan koneksikan database yang anda buat pada file .env.
+
+`DB_CONNECTION=pgsql (--menggunakan DB postgreSQL--)`<br>
+`DB_HOST=127.0.0.1`<br>
+`DB_PORT=5432` <br>
+`DB_DATABASE=(---isi dengan database yang anda buat--)`<br>
+`DB_USERNAME=postgres`<br>
+`DB_PASSWORD=postgres`<br>
+
+##### 2. Composer Install
+
+Masuk ke directory project melalui terminal dan jalankan perintal pada terminal untuk menginstall compose package project
+`composer install`
+
+##### 3. Generate Key
+
+Pada .env file APP_KEY akan secara otomatis kosong, untuk mendapatkan APP_KEY yang baru masuk pada directory project dengan terminal lalu jalankan perintah berikut:
+`php artisan key:generate`
+
+##### 4. Run Migration
+
+Setelah database sudah sudah diubah, jalankan perintah migration untuk membuat table migrasi ke database dengan menjalankan perintah sebagai berikut:
+`php artisan migrate`
+
+##### 5. Run Project
+
+Setelah 1-4 sudah selesai selanjutnya untuk menjalankan API jalankan perintah `php artisan serve` pada terminal.
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
