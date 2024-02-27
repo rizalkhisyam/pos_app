@@ -40,6 +40,7 @@ class ProductController extends Controller
             $insertData = Product::create([
                 "name" => $request->name,
                 "total" => $request->total,
+                "price" => $request->price,
                 "user_id" => $request->user()->id,
                 "category_id" => $request->category_id
             ]);

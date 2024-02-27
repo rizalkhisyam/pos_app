@@ -54,7 +54,7 @@ class AuthController extends Controller
         }else{
             return response()->json([
                 'success' => false,
-                'message' => 'Login failed, please check input!',
+                'message' => 'Incorrect username or password. Please try again.',
                 'data' => null
             ], 400);
         }
