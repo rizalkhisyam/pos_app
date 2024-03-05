@@ -55,7 +55,7 @@ class ProductController extends Controller
     public function show(Request $request)
     {
         $limit = $request->query('limit') ? $request->query('limit') : 5;
-        $offset = $request->query('offset') ? $request->query('offset') : 0;
+        $offset = $request->query('offset') ? $request->query('offset') * $limit : 0;
 
         $order = $request->query('order') ? $request->query('order') : 'DESC';
         $short = $request->query('short') ? $request->query('short') : 'id';
